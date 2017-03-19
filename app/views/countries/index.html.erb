@@ -1,0 +1,7 @@
+<h1>World of Wines</h1>
+<%= link_to "New Country", new_country_path %>
+<ul>
+  <% @country.each do |c| %>
+    <li><%= link_to c.name, country_path(c.id) %></li>
+  <%end%>
+</ul>

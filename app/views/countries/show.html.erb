@@ -1,0 +1,7 @@
+<h1><%= @country.name %></h1>
+
+<ul>
+  <% @country.regions.each do |cr| %>
+    <li><%= link_to cr.name, regions_path(cr.id) %></li>
+  <%end%>
+</ul>
