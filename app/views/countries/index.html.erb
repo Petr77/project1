@@ -1,4 +1,10 @@
+<%= link_to "Home", root_path, class: "item" %>
+<%= link_to "Signup", signup_path, class: "item" %>
+<%= link_to "Signin", signin_path, class: "item" %>
+<%= link_to "Signout", signout_path, class: "item", method: "delete" %>
+
 <h1>World of Wines</h1>
+
 <%= link_to "New Country", new_country_path %>
 <ul>
   <% @country.each do |c| %>
