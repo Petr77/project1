@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 20170320012643) do
   end
 
   create_table "regions_varieties", force: :cascade do |t|
-    t.integer "region_id"
-    t.integer "variety_id"
+    t.integer  "region_id"
+    t.integer  "variety_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
