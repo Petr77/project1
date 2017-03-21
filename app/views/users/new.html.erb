@@ -1,13 +1,25 @@
-<%= form_for @user do |f| %>
+<%= form_for @user do |u| %>
   <p>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= u.label :email %>
+    <%= u.text_field :email %>
   </p>
   <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= u.label :password %>
+    <%= u.password_field :password %>
   </p>
   <p>
-    <%= f.submit "Signup" %>
+  </p>
+  <p>
+    <%= u.label :name %>
+    <%= u.text_field :name %>
+  </p>
+  <p>
+  </p>
+  <p>
+    <%= u.label :dob %>
+    <%= u.text_field :date %>
+  </p>
+  <p>
+    <%= u.submit "Signup" %>
   </p>
 <%end%>

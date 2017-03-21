@@ -1,0 +1,9 @@
+<%= form_for @variety do |v|%>
+<input type="hidden" name="variety[region_id]" value="<%= @variety_id %>"/>
+  <p>
+    <%= v.label :name %>
+    <%= v.text_field :name %>
+  </p>
+
+  <%= v.submit %>
+<%end%>

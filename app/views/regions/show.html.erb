@@ -1,5 +1,7 @@
 <h1><%= @region.name %></h1>
 
+<%= link_to "Add Variety", new_variety_path(region_id: @region.id ) %>
+
 <ul>
   <% @region.varieties.each do |rv| %>
     <li><%= link_to rv.name, variety_path(rv.id) %></li>
