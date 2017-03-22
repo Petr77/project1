@@ -19,6 +19,24 @@ class RegionsController < ApplicationController
     end
   end
 
+  def edit
+    @region = Region.find(params[:id])
+  end
+
+  def update
+    @region = Region.find(params[:id])
+    if @region.update_attributes(clean_params)
+      redirect_to country_path @region.country
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @region = Region.find(params[:id]).destroy
+    redirect_to country_path @region.country
+  end
+
   private
 
   def clean_params

@@ -1,8 +1,9 @@
 <h1><%= @variety.name %></h1>
-<h2><%# @variety.region.name %></h2>
+
+<%= link_to "Add New Wine", new_wine_path(variety_id: @variety.id) %>
 
 <ul>
   <% @variety.wines.each do |wine| %>
-    <li><%= wine.name %></li>
+    <li><%= link_to wine.name, wine_path(wine.id) %></li>
   <%end%>
 </ul>

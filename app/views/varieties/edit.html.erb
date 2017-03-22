@@ -1,0 +1,13 @@
+<%= form_for @variety do |v|%>
+  <p>
+
+  <%= hidden_field_tag :region_id, @region_id %>
+  <%= hidden_field_tag :variety_id, @variety_id %>
+
+    <%= v.label :name %>
+    <%= v.text_field :name %>
+  </p>
+  <p>
+    <%= v.submit "Save" %>
+  </p>
+<%end%>

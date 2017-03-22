@@ -1,0 +1,9 @@
+<%= form_for @region do |r|%>
+  <p>
+    <%= r.label :name %>
+    <%= r.text_field :name %>
+  </p>
+  <p>
+    <%= r.submit "Save" %>
+  </p>
+<%end%>

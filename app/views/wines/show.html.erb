@@ -1,0 +1,7 @@
+<h1><%= @wine.name %></h1>
+
+<%= link_to "Delete Wine", wine_path(@wine.id), method: :delete %>
+
+<%= link_to "Edit Wine", edit_wine_path(wine_id: @wine.id) %>
+
+<%= cl_image_tag @wine.image, class: "wine-image" %>

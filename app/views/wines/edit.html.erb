@@ -1,0 +1,13 @@
+<%= form_for @wine do |w|%>
+  <p>
+    <%= w.label :name %>
+    <%= w.text_field :name %>
+  </p>
+  <p>
+    <%= w.label "Image " %>
+    <%= w.cl_image_upload :image %>
+  </p>
+  <p>
+    <%= w.submit "Save" %>
+  </p>
+<%end%>

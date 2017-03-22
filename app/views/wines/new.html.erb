@@ -1,0 +1,17 @@
+<%= form_for(@wine, :html => {:multipart => true} ) do |w| %>
+<%= render partial: "includes/form_errors", locals: {form: w} %>
+
+<input type="hidden" name="wine[variety_id]" value="<%= @variety_id %>" />
+<input type="hidden" name="wine[region_id]" value="<%= @region_id %>" />
+
+  <p>
+    <%= w.label :name %>
+    <%= w.text_field :name %>
+  </p>
+  <p>
+    <%= w.label "Image " %>
+    <%= w.cl_image_upload :image %>
+  </p>
+
+  <%= w.submit %>
+<%end%>
