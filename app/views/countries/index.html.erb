@@ -1,16 +1,51 @@
-<% if @current_user.nil? %>
-  <%= link_to "Signup", signup_path, class: "item" %>
-  <%= link_to "Signin", signin_path, class: "item" %>
-<% else %>
-  <%= link_to "Signout", signout_path, class: "item", method: "delete" %>
-<%end%>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>World of Wines</h1>
+    <p>The ultimate guide to wine</p>
+  </div>
+</div>
 
-<% if @current_user %>
-  <h4>Great to see you again <%= @current_user.email %>!</h4>
-<%end%>
+<div class="container">
+    <div class="col-md-5 no-padding lib-item" data-category="view">
+        <div class="lib-panel">
+            <div class="col-md-6">
+                <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+            </div>
+        </div>
+    </div>
 
-<h1>World of Wines</h1>
+    <div class="col-md-5 no-padding lib-item" data-category="ui">
+        <div class="lib-panel">
+            <div class="col-md-6">
+                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
+            </div>
+        </div>
+    </div>
 
+    <div class="col-md-5 no-padding lib-item" data-category="view">
+        <div class="lib-panel">
+            <div class="col-md-6">
+                <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5 no-padding lib-item" data-category="ui">
+        <div class="lib-panel">
+            <div class="col-md-6">
+                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-5 no-padding lib-item" data-category="ui">
+        <div class="lib-panel">
+            <div class="col-md-6">
+                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
+            </div>
+        </div>
+    </div>
+</div>
 <%= link_to "New Country", new_country_path %>
 <ul>
   <% @country.each do |c| %>
