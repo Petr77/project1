@@ -11,14 +11,14 @@ u2 = User.create email: "aaa@aaa.com", password: "password", name: "Lucy D", dob
 u3 = User.create email: "bbb@bbb.com", password: "password", name: "John L", dob: Date.new(1982, 10, 20)
 u4 = User.create email: "ccc@ccc.com", password: "password", name: "Sally M", dob: Date.new(1985, 06, 11)
 
-c1 = Country.create name: "Australia"
-c2 = Country.create name: "France"
-c3 = Country.create name: "Italy"
-c4 = Country.create name: "New Zealand"
-c5 = Country.create name: "Spain"
+c1 = Country.create name: "Australia", image: "mknkxypxmp294p3geqql"
+c2 = Country.create name: "France", image: "qo4uwjkme0w8fohuafpe"
+c3 = Country.create name: "Italy", image: "agxgslbkpftjiykgehxr"
+c4 = Country.create name: "New Zealand", image: "r8xmt5v2cmvoh8vu1e3r"
+c5 = Country.create name: "Spain", image: "wiknhryuvmwoikktfjtu"
 
-r1 = Region.create name: "Margaret River", country: c1
-r2 = Region.create name: "Barossa Valley", country: c1
+r1 = Region.create name: "Margaret River", country: c1, description: "desc"
+r2 = Region.create name: "Barossa Valley", country: c1, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 r3 = Region.create name: "Rhone Valley", country: c2
 r4 = Region.create name: "Marlborough", country: c4
 r5 = Region.create name: "Tuscany", country: c3

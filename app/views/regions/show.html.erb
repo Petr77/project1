@@ -1,10 +1,13 @@
-<h1><%= @region.name %></h1>
+<br>
+<div class="admin_button">
+  <%= link_to "Delete Region", region_path(@region.id), method: :delete, class: "btn btn-primary" %>
+  <%= link_to "Edit Region", edit_region_path(region_id: @region.id), class: "btn btn-primary" %>
+  <%= link_to "Add New Variety", new_variety_path(region_id: @region.id), class: "btn btn-primary" %>
+</div>
 
-<%= link_to "Delete Region", region_path(@region.id), method: :delete %>
+<h2><%= @region.name %></h2>
 
-<%= link_to "Edit Region", edit_region_path(region_id: @region.id) %>
-
-<%= link_to "Add New Variety", new_variety_path(region_id: @region.id) %>
+<p><%= @region.description %></p>
 
 <h2>Varities:</h2>
 <ul>

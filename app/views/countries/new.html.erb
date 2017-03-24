@@ -1,8 +1,9 @@
+<br>
 <%= form_for @country do |c|%>
   <p>
     <%= c.label :name %>
     <%= c.text_field :name %>
   </p>
 
-  <%= c.submit %>
+  <%= submit_tag "Create Country", class: "btn btn-primary" %>
 <%end%>

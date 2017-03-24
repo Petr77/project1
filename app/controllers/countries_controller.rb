@@ -33,6 +33,12 @@ class CountriesController < ApplicationController
 
   def update
     @country = Country.find(params[:id])
+
+    if params[:file].present?
+       req = Cloudinary::Uploader.upload(params[:file])
+       @country.image = req["public_id"]
+    end
+
     if @country.update_attributes(clean_params)
       redirect_to root_path
     else
@@ -43,7 +49,7 @@ class CountriesController < ApplicationController
   private
 
   def clean_params
-    params.require(:country).permit(:name)
+    params.require(:country).permit(:name, :image)
   end
 
 end

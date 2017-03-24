@@ -1,7 +1,11 @@
-<h1><%= @wine.name %></h1>
+<div class="admin_button">
+  <%= link_to "Delete Wine", wine_path(@wine.id), method: :delete, class: "btn btn-primary" %>
+  <%= link_to "Edit Wine", edit_wine_path(wine_id: @wine.id), class: "btn btn-primary" %>
+</div>
 
-<%= link_to "Delete Wine", wine_path(@wine.id), method: :delete %>
+<h2><%= @wine.name %></h2>
+<h2><%= @wine.description %></h2>
 
-<%= link_to "Edit Wine", edit_wine_path(wine_id: @wine.id) %>
-
-<%= cl_image_tag @wine.image, class: "wine-image" %>
+<div class="wine_image">
+  <%= cl_image_tag @wine.image, class: "wine-image" %>
+</div>

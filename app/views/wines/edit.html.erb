@@ -1,4 +1,4 @@
-<%= form_for @wine do |w|%>
+<%= form_for @wine, :html => {:multipart => true}  do |w|%>
   <p>
     <%= w.label :name %>
     <%= w.text_field :name %>

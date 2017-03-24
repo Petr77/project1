@@ -48,8 +48,14 @@ class WinesController < ApplicationController
 
   def update
     @wine = Wine.find(params[:id])
+
+    if params[:file].present?
+       req = Cloudinary::Uploader.upload(params[:file])
+       @wine.image = req["public_id"]
+     end
+
     if @wine.update_attributes(clean_params)
-      redirect_to wine_region_varieties_path(@wine.region_id, @wine.variety_id)
+      redirect_to wine_path(@wine)
     else
       render :edit
     end

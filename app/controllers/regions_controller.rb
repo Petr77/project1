@@ -40,7 +40,7 @@ class RegionsController < ApplicationController
   private
 
   def clean_params
-    params.require(:region).permit(:name, :country_id)
+    params.require(:region).permit(:name, :country_id, :description)
   end
 
 end

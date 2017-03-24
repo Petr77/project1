@@ -5,50 +5,44 @@
   </div>
 </div>
 
-<div class="container">
-    <div class="col-md-5 no-padding lib-item" data-category="view">
-        <div class="lib-panel">
-            <div class="col-md-6">
-                <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
-            </div>
-        </div>
+<div class="admin_button">
+  <%= link_to "New Country", new_country_path, class: "btn btn-primary"  %>
+</div>
+<br>
+<div class="container-fluid text-center bg-grey">
+  <div class="row text-center1">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3><strong>Australia</strong></h3>
+        <a href="/countries/1"><img class="lib-img" src="/assets/australia-map.png"/></a>
+      </div>
     </div>
-
-    <div class="col-md-5 no-padding lib-item" data-category="ui">
-        <div class="lib-panel">
-            <div class="col-md-6">
-                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
-            </div>
-        </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3><strong>Spain</strong></h3>
+        <a href="/countries/5"><img class="lib-img" src="/assets/spain-map.png"/></a>
+      </div>
     </div>
-
-    <div class="col-md-5 no-padding lib-item" data-category="view">
-        <div class="lib-panel">
-            <div class="col-md-6">
-                <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-5 no-padding lib-item" data-category="ui">
-        <div class="lib-panel">
-            <div class="col-md-6">
-                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-5 no-padding lib-item" data-category="ui">
-        <div class="lib-panel">
-            <div class="col-md-6">
-                <img class="lib-img" src="http://lorempixel.com/850/850/?random=456">
-            </div>
-        </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3><strong>France</strong></h3>
+        <a href="/countries/2"><img class="lib-img" src="/assets/france-map.png"/></a>
+      </div>
     </div>
 </div>
-<%= link_to "New Country", new_country_path %>
-<ul>
-  <% @country.each do |c| %>
-    <li><%= link_to c.name, country_path(c.id) %></li>
-  <%end%>
-</ul>
+
+<div class="container-fluid text-center bg-grey">
+  <div class="row text-center2">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3><strong>Italy</strong></h3>
+        <a href="/countries/3"><img class="lib-img" src="/assets/italy-map.png"></a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <h3><strong>New Zealand</strong></h3>
+        <a href="/countries/4"><img class="lib-img" src="/assets/zealand-map.png"/></a>
+      </div>
+    </div>
+</div>

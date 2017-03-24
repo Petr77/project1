@@ -1,10 +1,11 @@
-<h1><%= @region.name + ": " +  @variety.name %></h1>
+<br>
+<div class="admin_button">
+  <%= link_to "Add New Wine", new_wine_path(variety_id: @variety.id, region_id: @region.id), class: "btn btn-primary" %>
+  <%= link_to "Delete Variety", variety_path(@variety.id), method: :delete, class: "btn btn-primary" %>
+  <%= link_to "Edit Variety", edit_variety_path(@variety.id, variety_id: @variety.id, region_id: @region.id), class: "btn btn-primary" %>
+</div>
 
-<%= link_to "Add New Wine", new_wine_path(variety_id: @variety.id, region_id: @region.id) %>
-
-<%= link_to "Delete Variety", variety_path(@variety.id), method: :delete %>
-
-<%= link_to "Edit Variety", edit_variety_path(@variety.id, variety_id: @variety.id, region_id: @region.id) %>
+<h2><%= @region.name + ": " +  @variety.name %></h2>
 
 <ul>
   <% @wines.each do |wine| %>

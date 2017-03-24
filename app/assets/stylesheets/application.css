@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
 .jumbotron {
   background-image: url("/assets/vineyard4.jpg");
   background-size: cover;
@@ -24,39 +24,42 @@
   border-radius: 0 !important;
 }
 
-
-.lib-panel {
-    margin-bottom: 20Px;
-}
-.lib-panel img {
-    width: 100%;
-    background-color: transparent;
+.thumbnail{
+  cursor: pointer;
 }
 
-.lib-panel .row,
-.lib-panel .col-md-6 {
-    padding: 0;
-    background-color: #FFFFFF;
+h1 {
+  font-family: 'Tangerine', cursive, sans-serif;
+  font-size: 100px !important;
 }
 
-
-.lib-panel .lib-row {
-    padding: 0 20px 0 20px;
+h2 {
+  font-size: 50px;
+  text-align: center;
 }
 
-.lib-panel .lib-row.lib-desc {
-    position: relative;
-    height: 100%;
-    display: block;
-    font-size: 13px;
-}
-.lib-panel .lib-row.lib-desc a{
-    position: absolute;
-    width: 100%;
-    bottom: 10px;
-    left: 20px;
+.admin_button {
+  text-align: center;
 }
 
-.row-margin-bottom {
-    margin-bottom: 20px;
+.wine_image {
+  text-align: center;
+  max-height: 700px;
+}
+
+.row.text-center2 {
+  margin-left: 24%;
+}
+
+.lib-img {
+  height: 300px;
+  width: 300px;
+}
+
+.country_image {
+  
+}
+
+footer {
+  position: fixed;
 }
