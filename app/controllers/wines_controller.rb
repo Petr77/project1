@@ -69,7 +69,7 @@ class WinesController < ApplicationController
   private
 
   def clean_params
-    params.require(:wine).permit(:name, :variety_id, :region_id)
+    params.require(:wine).permit(:name, :variety_id, :region_id, :description)
   end
 
 end

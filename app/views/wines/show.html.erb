@@ -1,8 +1,10 @@
 <br>
-<div class="admin_button">
-  <%= link_to "Delete Wine", wine_path(@wine.id), method: :delete, class: "btn btn-primary" %>
-  <%= link_to "Edit Wine", edit_wine_path(wine_id: @wine.id), class: "btn btn-primary" %>
-</div>
+<% if @current_user.present? %>
+  <div class="admin_button">
+    <%= link_to "Delete Wine", wine_path(@wine.id), method: :delete, class: "btn btn-primary" %>
+    <%= link_to "Edit Wine", edit_wine_path(wine_id: @wine.id), class: "btn btn-primary" %>
+  </div>
+<% end %>
 
 <h2><%= @wine.name %></h2>
 
