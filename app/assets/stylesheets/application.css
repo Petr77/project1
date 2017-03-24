@@ -57,9 +57,24 @@ h2 {
 }
 
 .country_image {
-  
+ text-align: center;
 }
 
 footer {
   position: fixed;
+}
+
+.text {
+  margin: 0 10%;
+  font-size: 18px;
+}
+
+li {
+  display: inline;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.main_links {
+  text-align: center;
 }

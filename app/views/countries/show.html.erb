@@ -1,20 +1,22 @@
 <br>
-<div class="admin_button">
-  <%= link_to "Delete Country", country_path(@country.id), method: :delete, class: "btn btn-primary" %>
-  <%= link_to "Edit Country", edit_country_path(@country.id), class: "btn btn-primary" %>
-  <%= link_to "Add Region", new_region_path(country_id: @country.id ), class: "btn btn-primary" %>
+<% if @current_user.present? %>
+  <div class="admin_button">
+    <%= link_to "Delete Country", country_path(@country.id), method: :delete, class: "btn btn-primary" %>
+    <%= link_to "Edit Country", edit_country_path(@country.id), class: "btn btn-primary" %>
+    <%= link_to "Add Region", new_region_path(country_id: @country.id ), class: "btn btn-primary" %>
 </div>
+<% end %>
 
 <h2><%= @country.name %></h2>
 
 <div class="main_links">
   <ul>
     <% @country.regions.each do |cr| %>
-      <li><%= link_to cr.name, region_path(cr.id) %></li>
+      <li><%= link_to cr.name, region_path(cr.id), class: "btn btn-success btn-lg" %></li>
     <%end%>
   </ul>
 </div>
-
+<br>
 <div class="country_image">
-  <%= cl_image_tag @country.image %>
+  <%= cl_image_tag @country.map_image %>
 </div>

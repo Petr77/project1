@@ -2,7 +2,7 @@ class CountriesController < ApplicationController
   before_action :authenticate_user, only: [:edit, :update, :destroy]
 
   def index
-    @country = Country.all.order :name
+    @countries = Country.all.order :name
   end
 
   def new
