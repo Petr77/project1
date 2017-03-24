@@ -7,6 +7,12 @@
     <%= w.label "Image " %>
     <%= w.cl_image_upload :image %>
   </p>
+
+  <p>
+    <%= w.label :description %>
+    <%= w.text_field :description %>
+  </p>
+  
   <p>
     <%= w.submit "Save" %>
   </p>
