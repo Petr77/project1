@@ -8,10 +8,11 @@
 
 <h2><%= @wine.name %></h2>
 
-<div class="text">
-  <p><%= @wine.description %></p>
-</div>
 
-<div class="wine_image">
+<span class="wine_text">
+  <p><%= @wine.description %></p>
+</span>
+
+<span class="wine_image">
   <%= cl_image_tag @wine.image, class: "wine-image" %>
-</div>
+</span>

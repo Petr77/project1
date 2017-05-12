@@ -17,6 +17,7 @@
 .jumbotron {
   background-image: url("/assets/vineyard4.jpg");
   background-size: cover;
+  border-radius: 0;
 }
 
 .navbar-inverse {
@@ -26,16 +27,26 @@
 
 .thumbnail{
   cursor: pointer;
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 10%;
 }
 
 h1 {
+  font-size: 150px !important;
+  text-shadow: 4px 4px 4px white;
+}
+
+.header_text {
   font-family: 'Tangerine', cursive, sans-serif;
-  font-size: 100px !important;
+  color: black !important;
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
+  text-shadow: 4px 4px 4px white;
 }
 
 .admin_button {
@@ -43,8 +54,15 @@ h2 {
 }
 
 .wine_image {
-  text-align: center;
-  max-height: 700px;
+  display: inline-block;
+  padding:  0 5em;
+}
+
+.wine_text {
+  font-size: 22px;
+  max-width: 600px;
+  margin: 5em;
+  display: inline-block;
 }
 
 .row.text-center2 {
@@ -52,8 +70,8 @@ h2 {
 }
 
 .lib-img {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
 }
 
 .country_image {
@@ -62,11 +80,6 @@ h2 {
 
 footer {
   position: fixed;
-}
-
-.text {
-  margin: 0 10%;
-  font-size: 18px;
 }
 
 li {
@@ -78,3 +91,29 @@ li {
 .main_links {
   text-align: center;
 }
+
+.country_image > img{
+  height: 700px;
+  width: 500px;
+}
+
+.country-thumb {
+  max-height: 200px;
+  margin: 0 auto !important;
+}
+
+.col-md-3 {
+  margin: 55px;
+}
+
+body {
+  background-color: #fbe4bd
+}
+ h4 {
+   text-align: center;
+ }
+
+ .img-fluid {
+   padding-left: 58px;
+   padding-top: 10px;
+ }

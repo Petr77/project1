@@ -1,7 +1,9 @@
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>World of Wines</h1>
-    <p>The ultimate guide to wine</p>
+    <div class="header_text">
+      <h1>World of Wines</h1>
+      <h2>The ultimate guide to wine</h2>
+    </div>
   </div>
 </div>
 
@@ -9,7 +11,7 @@
   <%= link_to "New Country", new_country_path, class: "btn btn-primary"  %>
 </div>
 <br>
-
+<!--
 <div class="container-fluid text-center bg-grey">
   <div class="row text-center1">
 <% @countries.each do |country| %>
@@ -23,44 +25,33 @@
   </div>
 <% end %>
   </div>
-</div>
+</div> -->
 
-<!--
-<div class="container-fluid text-center bg-grey">
-  <div class="row text-center1">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <h3><strong>Australia</strong></h3>
-        <a href="/countries/1"><img class="lib-img" src="/assets/australia-map.png"/></a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <h3><strong>Spain</strong></h3>
-        <a href="/countries/5"><img class="lib-img" src="/assets/spain-map.png"/></a>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <h3><strong>France</strong></h3>
-        <a href="/countries/2"><img class="lib-img" src="/assets/france-map.png"/></a>
-      </div>
-    </div>
-</div>
 
-<div class="container-fluid text-center bg-grey">
-  <div class="row text-center2">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <h3><strong>Italy</strong></h3>
-        <a href="/countries/3"><img class="lib-img" src="/assets/italy-map.png"></a>
-      </div>
+<div class="row">
+
+<% @countries.each do |country| %>
+
+ <div class="col-md-3">
+
+  <!--Card-->
+  <div class="card" >
+  <%= link_to country_path country do %>
+    <%= cl_image_tag country.image, class: "img-fluid country-thumb" %>
+    <% end %>
+    <!--/.Card image-->
+
+    <!--Card content-->
+    <div class="card-block">
+        <!--Title-->
+        <h4 class="card-title"><%= country.name %></h4>
+        <!--Text-->
     </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <h3><strong>New Zealand</strong></h3>
-        <a href="/countries/4"><img class="lib-img" src="/assets/zealand-map.png"/></a>
-      </div>
-    </div>
-</div>
--->
+    <!--/.Card content-->
+</div><!-- card -->
+
+</div><!-- col-md-3 -->
+
+<% end %>
+
+</div><!-- row -->

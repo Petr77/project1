@@ -3,8 +3,8 @@
   <head>
     <title>Project1</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
   </head>
 
@@ -12,6 +12,6 @@
     <%= render "includes/navigation" %>
    <%= render "includes/flash_notices" %>
     <%= yield %>
-    <%= render "includes/footer" %>
+    <!-- <%= render "includes/footer" %> -->
   </body>
 </html>

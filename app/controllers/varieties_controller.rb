@@ -54,3 +54,8 @@ class VarietiesController < ApplicationController
   end
 
 end
+<h1>Index Images</h1>
+
+<% @current_user.images.each do |i| %>
+  <%= cl_image_tag(i.img_src) %>
+<% end %>

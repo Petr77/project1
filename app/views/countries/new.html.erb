@@ -1,8 +1,13 @@
 <br>
-<%= form_for @country do |c|%>
+<%= form_for @country, :html => {:multipart => true} do |c|%>
   <p>
     <%= c.label :name %>
     <%= c.text_field :name %>
+  </p>
+
+  <p>
+    <%= c.label "Image " %>
+    <%= c.cl_image_upload :image %>
   </p>
 
   <%= submit_tag "Create Country", class: "btn btn-primary" %>
