@@ -55,7 +55,7 @@ h2 {
 
 .wine_image {
   display: inline-block;
-  padding:  0 5em;
+  padding: 0 5em;
 }
 
 .wine_text {
@@ -75,7 +75,7 @@ h2 {
 }
 
 .country_image {
- text-align: center;
+  text-align: center;
 }
 
 footer {
@@ -92,7 +92,7 @@ li {
   text-align: center;
 }
 
-.country_image > img{
+.country_image > img {
   height: 700px;
   width: 500px;
 }
@@ -107,13 +107,14 @@ li {
 }
 
 body {
-  background-color: #fbe4bd
+  background-color: #fbe4bd;
 }
- h4 {
-   text-align: center;
- }
 
- .img-fluid {
-   padding-left: 58px;
-   padding-top: 10px;
- }
+h4 {
+  text-align: center;
+}
+
+.img-fluid {
+  padding-left: 58px;
+  padding-top: 10px;
+}

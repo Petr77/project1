@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :wines#, only: [:show, :new, :create, :destroy]
 
 
-  get "signup", to: "users#new", as: "signup"
+  get "/signup", to: "users#new", as: "signup"
   resources :users, only: [:create]
 
 
